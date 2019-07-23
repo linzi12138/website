@@ -6,20 +6,6 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/onepage-scroll.css" />
 	<link rel="stylesheet" href="css/my.css" />
-	<style>
-
-		.page1 { background-color: #1bbc9b;}
-
-		.page2 { background-color: #FF7F50;}
-
-		.page3 { background-color: #4BBFC3;}
-
-		.page4 { background-color: #f90;}
-
-		p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color: #fff; text-align: center;}
-
-	</style>
-
 	<script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/jquery.onepage-scroll.min.js"></script>
@@ -28,6 +14,18 @@
 			$('.main').onepage_scroll({
 				sectionContainer: '.page',
 				loop: false,
+				pagination:false,
+				animationTime:500,
+				afterMove(e){
+					console.log(e)
+					$('.nav-bar a').each(function(){
+						if (($(this).index()+1) == e) {
+							$(this).attr('class','active');
+						}else{
+							$(this).attr('class','nav-bar-a');
+						}
+					})
+				}
 			});
 		});
 	</script>
@@ -38,19 +36,22 @@
 			<img src="image/logo.png">
 		</div>
 		<div class="nav-bar">
-			<ul>
-				<li><a class="active" href="#">首页</a></li>
-				<li><a href="#">解决方案</a></li>
-				<li><a href="#">安全产品</a></li>
-				<li><a href="#">安全咨询</a></li>
-				<li><a href="#">关于我们</a></li>
-			</ul>
+			<a class="nav-bar-a active">首页</a>
+			<a class="nav-bar-a">解决方案</a>
+			<a class="nav-bar-a">安全产品</a>
+			<a class="nav-bar-a">安全咨询</a>
+			<a class="nav-bar-a">关于我们</a>
 		</div>
 	</div>
+	<div class="top-button">
+		<img src="image/plane.png">
+	</div>
+
+	<!-- 单页 -->
 	<div class="main">
 
 		<!-- 第一屏 -->
-		<div class="page">
+		<div class="page" style="z-index: 99">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
@@ -95,33 +96,36 @@
 			<div class="item-box">
 				<ul>
 					<li class="li1" id="li1">
-						<div class="fold" style='display: none;'>
+						<div class="fold">
 							<img src="image/icon1.png" class="li-icon">
 							<img src="image/fold1.png" class="li-img">
+							<p class="li-text" style="display: block;">危险化学品装卸运输监管平台</p>
 						</div>
-						<div class="unfold" style="display:block;">
+						<div class="unfold" style="display:none;">
 							<img src="image/unfold1.png" class="li-img">
 							<p class="unfold-text">危险化学品装卸运输监管平台</p>
 							<img src="image/content1.png" class="li-content">
-							<p class="li-button">查看详情</p>
+							<p class="li-button"><a href="safe1.html">查看详情</a></p>
 						</div>
 					</li>
 					<li class="li2" id="li2">
 						<div class="fold">
 							<img src="image/icon2.png" class="li-icon">
 							<img src="image/fold2.png" class="li-img">
+							<p class="li-text" style="display: block;">重大危险源事故后果分析模型</p>
 						</div>
 						<div class="unfold" style="display:none">
 							<img src="image/unfold2.png" class="li-img">
 							<p class="unfold-text">重大危险源事故后果分析模型</p>
 							<img src="image/content2.png" class="li-content">
-							<p class="li-button">查看详情</p>
+							<p class="li-button"><a href="safe2.html">查看详情</a></p>
 						</div>
 					</li>
 					<li class="li3" id="li3">
 						<div class="fold">
 							<img src="image/icon3.png" class="li-icon">
 							<img src="image/fold3.png" class="li-img">
+							<p class="li-text" style="display: block;">危险货物道路运输电子运单平台</p>
 						</div>
 						<div class="unfold" style="display:none">
 							<img src="image/unfold3.png" class="li-img">
@@ -134,6 +138,7 @@
 						<div class="fold">
 							<img src="image/icon4.png" class="li-icon">
 							<img src="image/fold4.png" class="li-img">
+							<p class="li-text" style="display: block;">本安型防爆车载监管仪</p>
 						</div>
 						<div class="unfold" style="display:none">
 							<img src="image/unfold4.png" class="li-img">
@@ -156,8 +161,11 @@
 							<img src="image/card1.png">
 							<p>政府服务</p>
 						</div>
-						<div class="card-detail">
+						<div class="card-detail" style="display:none">
 							<img src="image/arrow.png">
+							<p>政府安全生产第三方考核</p>
+							<p>安全生产规划编制</p>
+							<p>应急体系规划编制</p>
 						</div>
 					</div>
 					<div name='card' class="consulation-card-item-active">
@@ -165,8 +173,11 @@
 							<img src="image/card2.png">
 							<p>企业服务</p>
 						</div>
-						<div class="card-detail">
-							
+						<div class="card-detail" style="display:block;">
+							<img src="image/arrow.png">
+							<p>标准化辅导咨询</p>
+							<p>隐患排查</p>
+							<p>应急预案编制</p>
 						</div>
 					</div>
 					<div name='card' class="consulation-card-item">
@@ -174,8 +185,10 @@
 							<img src="image/card3.png">
 							<p>园区服务</p>
 						</div>
-						<div class="card-detail">
-							
+						<div class="card-detail" style="display:none">
+							<img src="image/arrow.png">
+							<p>园区安全规划</p>
+							<p>园区定量风险评估</p>
 						</div>
 					</div>
 				</div>
@@ -184,9 +197,71 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 第五屏 -->
+		<div class="page">
+			<div class='about-us'>
+				<div class="about-content">
+					<p style="font-size: 140%;">联系方式</p>
+					<p>Contact information</p>
+					<p style="margin-top: 3%;">地址：北京市朝阳区北苑路32号院甲1号楼安全大厦18层</p>
+					<p style="margin-top: 1%;">网址：WWW.CASST-TEC.COM</p>
+					<p style="margin-top: 1%;">邮件：LIYY@CASST-TEC.COM</p>
+					<p style="margin-top: 1%;">电话：1590132123</p>
+				</div>
+				<div class="about-footer">
+					<p style="font-size: 140%;">－合作单位－</p>
+					<div class='about-detail'>
+						<div class="about-list">
+							<div class="about-item">
+								<p>国家应急管理部</p>
+								<p>辽宁省应急管理局</p>
+								<p>云南省应急管理局</p>
+							</div>
+							<div class="about-item">
+								<p>北京市应急管理局</p>
+								<p>吉林省应急管理局</p>
+								<p>淄博应市急管理局</p>
+							</div>
+							<div class="about-item">
+								<p>天津市应急管理局</p>
+								<p>黑龙江省应急管理局</p>
+								<p>青岛市应急管理局</p>
+							</div>
+						</div>
+						<div class="about-list-img">
+							<div class="about-img">
+								<img src="image/com1.png">
+								<img src="image/com4.png">
+							</div>
+							<div class="about-img">
+								<img src="image/com2.png">
+								<img src="image/com5.png">
+							</div>
+							<div class="about-img">
+								<img src="image/com3.png">
+								<img src="image/com6.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-back">
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script>
+		//导航栏点击
+		$('.nav-bar a').click(function(){
+			$('.nav-bar a').each(function(){
+				$(this).attr('class','nav-bar-a');
+			})
+			$('.main').moveTo($(this).index()+1);
+			$(this).addClass('active');
+		})
+
+		//轮播图
 		var mySwiper = new Swiper('.swiper-container',{
 			autoplay: true,
 			// autoHeight: true,
@@ -196,6 +271,7 @@
 			},
 		})
 
+		//手风琴初始化
 		$(function(){
 			$('.item-box ul li').each(function(){
 				var fold = $(this).find('.fold');
@@ -203,11 +279,11 @@
 				if (fold.is(':hidden')) {
 					$(this).width('70%');
 				}else {
-					$(this).width('12%');
+					$(this).width('25%');
 				}
 			})
 		})
-
+		//手风琴点击
 		$('.item-box ul li').click(function(){
 			var li_index = $(this).index();
 			$(this).animate({width:'70%'},200);
@@ -216,13 +292,29 @@
 			$(this).siblings().animate({width:'12%'},200);
 			$(this).siblings().find(".unfold").hide();
 			$(this).siblings().find(".fold").show();
-		})
 
-		$('div[name="card"]').click(function(){
+			$(".li-text").each(function(){
+				$(this).hide();
+			});
+		})
+		
+		//安全咨询
+		$('div[name="card"]').hover(function(){
 			$('div[name="card"]').each(function(){
 				$(this).attr('class','consulation-card-item');
+				$(this).find('.card-detail').hide();
 			})
 			$(this).attr('class','consulation-card-item-active');
+			$(this).find('.card-detail').show();
+		})
+
+		//回到顶部
+		$('.top-button').click(function(){
+			$('.nav-bar a').each(function(){
+				$(this).attr('class','nav-bar-a');
+			})
+			$('.main').moveTo(1);
+			$('.nav-bar a')[0].className = 'active'
 		})
 	</script>
 </body>

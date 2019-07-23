@@ -7,19 +7,37 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+/*回到顶部*/
+.top-button{
+	position: fixed;
+	bottom: 10%;
+	right: 5%;
+	width:40px;
+	height: 40px;
+	z-index: 1;
+}
+/*回到首页*/
+.home-button{
+	position: fixed;
+	bottom: 20%;
+	right: 5%;
+	width:40px;
+	height: 40px;
+	z-index: 1;
+}
+/*头部*/
 .header{
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 99;
 	width: 100%;
-	height: 48px;
+	padding: 1% 4%;
 	background:rgba(0,64,104,1);
 	opacity:1;
-	padding: 12px 84px;
 }
 .logo{
-	height: 48px;
+	height: 40px;
 	float: left;
 }
 .logo img{
@@ -28,35 +46,39 @@ html,body{
 /*导航栏*/
 .nav-bar{
 	height: 100%;
-	width:80%;
+	width:70%;
 	margin: 0 auto;
-}
-.nav-bar ul{
-	height: 100%;
-	list-style: none;
-	margin: 0 10%;
+	height: 40px;
 	display: flex;
 	justify-content: space-around;
 }
-.nav-bar li a {
+.nav-bar-a {
 	display: block;
 	color: white;
-	line-height: 100%;
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
-	padding: 14px 32px;
+	padding: 0 20px;
+	white-space: nowrap;
 	text-decoration: none;
 }
-.nav-bar li a:hover:not(.active) {
+.nav-bar-a:hover:not(.active) {
 	color: white;
 	background-color: #0096FF;
 	border-radius:7px;
+	cursor: pointer;
+}
+.nav-bar a.active {
+	color: white;
+	background-color: #0096FF;
+	border-radius:7px;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	text-align: center;
 }
 
-.nav-bar li a.active {
-	color: white;
-	background-color: #0096FF;
-	border-radius:7px;
-}
 
 /*底部文字*/
 .footer-text{
@@ -207,10 +229,19 @@ html,body{
 }
 .item-box .li-icon{
 	position: absolute;
-	top: 45%;
-	width:50%;
-	left: 23%;
+	top: 26%;
+	width:20%;
+	left: 39%;
 	z-index: 9;
+}
+.item-box .li-text{
+	position: absolute;
+	top: 42%;
+	width:100%;
+	text-align: center;
+	font-size: 150%;
+	color:#fff;
+	font-weight: bold;
 }
 .unfold-text{
 	width:100%;
@@ -247,11 +278,20 @@ html,body{
 	color: #fff;
 	font-weight: bold;
 }
+.li-button a{
+	text-decoration: none;
+	color:#fff;
+}
+.li-button:hover{
+	cursor: pointer;
+	box-shadow: 0 0 8px #fff;
+	background:rgb(0,130,255);
+}
 
 /*第四屏*/
 .consulation-box{
 	height: 100%;
-	margin-top: 10%;
+	padding-top: 10%;
 	position: relative;
 }
 .consulation-back{
@@ -306,9 +346,86 @@ html,body{
 }
 .card-detail img{
 	width:8%;
-	margin: 0 auto;
+	margin: 2% auto;
 	display: block;
 }
-.card-detail img:hover{
-	width:10%;
+.card-detail {
+	text-align: center;
+	font-size: 100%;
+	line-height: 2;
+	color:#fff;
+}
+
+/*第五屏*/
+.about-us{
+	height: 100%;
+	padding-top: 7%;
+	position: relative;
+}
+.about-back{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url('../image/back3.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+.about-content{
+	width:80%;
+	height: 40%;
+	margin: 0 auto;
+	padding-top: 2%;
+	text-align: center;
+	color: #fff;
+	background:linear-gradient(87deg,rgba(255,255,255,0) 0%,rgba(84,84,84,0.6) 50%,rgba(128,128,128,0) 100%);
+}
+.about-footer{
+	height: 25%;
+	width:100%;
+	background:rgba(0,64,104,1);
+	position: absolute;
+	bottom: 12%;
+	color:#fff;
+	text-align: center;
+	padding-top: 1%;
+}
+.about-detail{
+	display: flex;
+	width:70%;
+	height: 55%;
+	margin: 0 auto;
+	margin-top: 1%;
+	justify-content: space-between;
+	font-size: 80%;
+}
+.about-list{
+	display: flex;
+	text-align: left;
+	width: 45%;
+	justify-content: flex-end;
+	white-space: nowrap;
+}
+.about-list-img{
+	display: flex;
+	text-align: left;
+	width: 45%;
+}
+.about-item{
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.about-img{
+	height: 100%;
+	margin: 0 1%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.about-img img{
+	width: 100%;
 }

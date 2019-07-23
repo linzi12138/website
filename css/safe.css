@@ -1,0 +1,144 @@
+
+/*safe1.html*/
+.contain1{
+	height: 200rem	;
+	padding-top: 200px;
+	background: url(../image/board1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.font-title{
+	text-align: center;
+	margin-bottom: 56px;
+	font-size:200%;
+	color: #fff;
+}
+.font-class{
+	width: 16%;
+	height: 62px;
+	background:rgba(14,237,231,1);
+	opacity:1;
+	border-radius:63px;
+	color: #fff;
+	text-shadow: 0px 2px 0px #000;
+	text-align: center;
+	line-height: 62px;
+	font-size: 130%;
+	font-weight: bold;
+	margin-left: 13%;
+}
+.paragraph{
+	width:70%;
+	margin: 200px auto;
+	font-size: 18px;
+	line-height: 57px;
+	color: #fff;
+}
+.pic-1{
+	width:80%;
+	display: flex;
+	margin: 80px auto;
+	justify-content: space-between;
+}
+.pic-2{
+	width:78%;
+	margin: 80px auto;
+}
+.pic-3{
+	width:78%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 80px auto;
+}
+.pic-4{
+	width:78%;
+	margin: 80px auto;
+}
+
+.special-text{
+	width:70%;
+	margin: 80px auto;
+	display: flex;
+}
+.special-item{
+	text-align: center;
+	width:33.3%;
+}
+.special-title{
+	line-height:54px;
+	color:rgba(14,237,231,1);
+	font-size: 180%;
+}
+.special-p{
+	color: #fff;
+	margin-top: 35px;
+	font-size: 160%;
+}
+.special-img{
+	margin-top: 35px;
+}
+.footer{
+	height: 16rem;
+	width: 100%;
+	background: #03062B;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	padding-top: 3rem;
+}
+.footer-text{
+	width:65%;
+	margin: 2rem auto;
+	color: #fff;
+	white-space: nowrap;
+	font-size: 120%;
+}
+.backup{
+	width:80%;
+	margin: 0 auto;
+	margin-top: 5rem;
+	white-space: nowrap;
+	color: #0EEDE7;
+	display: flex;
+	justify-content: space-around;
+}
+.footer-logo{
+	position: absolute;
+	top: 3rem;
+	right: 20rem;
+}
+
+/*safe2.html*/
+.contain2{
+	height: 200rem	;
+	padding-top: 200px;
+	background: url(../image/board2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.paragraph-box{
+	width:70%;
+	margin: 100px auto;
+	font-size: 18px;
+	line-height: 57px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.paragraph-left{
+	width:65%;
+	font-size: 130%;
+}
+.paragraph-right{
+	width:25%;
+	color: #0EEDE7;
+	font-size: 150%;
+	text-align: center;
+	font-weight: bold;
+}
+.paragraph-right img{
+	width:100%;
+}
