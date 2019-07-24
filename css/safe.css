@@ -1,11 +1,10 @@
 
 /*safe1.html*/
 .contain1{
-	height: 200rem	;
-	padding-top: 200px;
-	background: url(../image/board1.png);
-	background-size: cover;
-	background-repeat: no-repeat;
+	width: 1200px;
+	height:3800px;
+	margin: 0 auto;
+	padding-top: 150px;
 	position: relative;
 }
 .font-title{
@@ -30,7 +29,7 @@
 }
 .paragraph{
 	width:70%;
-	margin: 200px auto;
+	margin: 100px auto;
 	font-size: 18px;
 	line-height: 57px;
 	color: #fff;
@@ -41,15 +40,27 @@
 	margin: 80px auto;
 	justify-content: space-between;
 }
+.pic-1 img{
+	width: 48%;
+	height: 100%;
+}
 .pic-2{
 	width:78%;
 	margin: 80px auto;
+}
+.pic-2 img ,.pic-4 img{
+	width: 80%;
+	height: 100%;
 }
 .pic-3{
 	width:78%;
 	display: flex;
 	justify-content: flex-end;
 	margin: 80px auto;
+}
+.pic-3 img{
+	width: 80%;
+	height: 100%;
 }
 .pic-4{
 	width:78%;
@@ -65,6 +76,9 @@
 	text-align: center;
 	width:33.3%;
 }
+.special-item img{
+	width: 60%;
+}
 .special-title{
 	line-height:54px;
 	color:rgba(14,237,231,1);
@@ -73,32 +87,34 @@
 .special-p{
 	color: #fff;
 	margin-top: 35px;
-	font-size: 160%;
 }
 .special-img{
 	margin-top: 35px;
 }
 .footer{
-	height: 16rem;
-	width: 100%;
+	height: 30%;
+	width: 100vw;
 	background: #03062B;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: 0;
-	padding-top: 3rem;
+	padding-top: 2%;
+	position: relative;
+}
+.footer2{
+	height: 30%;
+	width: 100vw;
+	background: #03062B;
+	padding-top: 2%;
+	position: relative;
 }
 .footer-text{
-	width:65%;
-	margin: 2rem auto;
+	width:72%;
+	margin: 2% auto;
 	color: #fff;
 	white-space: nowrap;
-	font-size: 120%;
+	font-size: 100%;
 }
 .backup{
 	width:80%;
 	margin: 0 auto;
-	margin-top: 5rem;
 	white-space: nowrap;
 	color: #0EEDE7;
 	display: flex;
@@ -106,15 +122,17 @@
 }
 .footer-logo{
 	position: absolute;
-	top: 3rem;
-	right: 20rem;
+	top: 13%;
+	right: 14%;
+	width: 20%;
 }
 
 /*safe2.html*/
 .contain2{
-	height: 200rem	;
-	padding-top: 200px;
-	background: url(../image/board2.png);
+	width: 1200px;
+	height:2300px;
+	margin: 0 auto;
+	padding-top: 150px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -122,7 +140,6 @@
 .paragraph-box{
 	width:70%;
 	margin: 100px auto;
-	font-size: 18px;
 	line-height: 57px;
 	color: #fff;
 	display: flex;
@@ -130,10 +147,11 @@
 }
 .paragraph-left{
 	width:65%;
-	font-size: 130%;
 }
 .paragraph-right{
 	width:25%;
+}
+.blue-text{
 	color: #0EEDE7;
 	font-size: 150%;
 	text-align: center;
@@ -141,4 +159,345 @@
 }
 .paragraph-right img{
 	width:100%;
+}
+.business-img{
+	width: 80%;
+	margin: 119px auto;
+	display: flex;
+	text-align: center;
+	justify-content: space-between
+}
+.business-img-left,.business-img-right{
+	width: 48%
+}
+.business-img-left p,.business-img-right p{
+	margin-bottom: 20px;
+	color: #F7CF19;
+}
+.business-img img{
+	width: 100%;
+}
+.platform-special{
+	width:70%;
+	margin: 4% auto;
+}
+.platform-special img{
+	width:100%;
+	height: 100%;
+	margin-top: 2%;
+}
+.platform-text{
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+}
+.platform-text p{
+	width: 30%;
+	margin-top: 3%;
+	text-align: center;
+	color: #fff;
+	line-height: 57px;
+}
+.platform-shot{
+	width: 80%;
+	margin:5% auto;
+}
+.shot-img{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	color: #fff;
+	line-height: 57px;
+}
+.shot-img div{
+	width: 48%;
+}
+.shot-img div img{
+	width: 100%;
+	margin-top: 2%;
+}
+.video-box{
+	width: 80%;
+	margin: 100px auto;
+}
+
+/*safe3*/
+.contain3{
+	width: 1200px;
+	margin: 0 auto;
+	height:3500px;
+	padding-top: 150px;
+	/*background: url(../image/board3.png);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.paragraph-detail-3{
+	width: 70%;
+	font-size: 100%;
+}
+.blue-box-1{
+	width: 80%;
+	height: 20%;
+	margin: 0 auto;
+	background: url(../safe/blue1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.blue-list{
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	height: 100%;
+	/*padding: 18% 0;*/
+	margin: 0 auto;
+}
+.blue-item{
+	width: 18%;
+	height:23%;
+	margin-top: 24%;
+	background: url(../safe/blue4.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: relative;
+}
+.blue-item-text1{
+	height:100%;
+	color: #F7CF19;
+	line-height: 160%;
+	font-size: 81%;
+	margin: 10% 2%;
+}
+.blue-item-text2{
+	position: absolute;
+	/*bottom: 20%;*/
+	width: 100%;
+	color: #0EEDE7;
+	z-index: 2;
+	font-weight: bold;
+}
+.blue-box-2{
+	width: 80%;
+	height: 20%;
+	margin: -100px auto;
+	background: url(../safe/blue2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.blue-box-3{
+	width: 80%;
+	height: 20%;
+	margin: -100px auto;
+	background: url(../safe/blue3.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.swiper-box{
+	width: 80%;
+	margin: 5% auto;
+}
+.success-link{
+	width: 40%;
+	margin: 50px auto; 
+	display: flex;
+	justify-content: space-around;
+}
+.success-link a{
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+}
+.success-item{
+	height: 30px;
+	line-height: 50px;
+	display: flex;
+	align-items: center;
+}
+.success-item img{
+	height: 100%;
+	margin-right: 4px;
+}
+
+/*safe4.html*/
+.contain4{
+	width: 1200px;
+	height:4800px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+.production-box{
+	width: 68%;
+	padding:1%;
+	display: flex;
+	justify-content: space-between;
+	margin: 2% auto;
+	background: -webkit-linear-gradient(#3E3893#3E3893, #EA0774
+		); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#3E3893, #EA0774
+		); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#3E3893, #EA0774
+		); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#3E3893, #EA0774
+		); /* 标准的语法 */
+	border-radius:15px;
+}
+.spider-box{
+	width: 90%;
+	margin: 50px auto;
+}
+.spider-box img{
+	width: 100%;
+	height: 100%;
+}
+.babel-box{
+	width: 90%;
+	height: 14%;
+	margin: 4% auto;
+	color: #fff;
+	font-weight: bold;
+	position: relative;
+}
+.babal-center{
+	width: 120px;
+	height: 120px;
+	padding: 30px;
+	padding-top: 60px;
+	background: url('../safe/blue.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: absolute;
+	left: 40%;
+	top: 36%;
+}
+.babel-item{
+	height: 100px;
+	width: 100px;
+	padding: 30px;
+	padding-top: 50px;
+	background: url('../safe/yellow.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: absolute;
+	animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite; /*Safari and Chrome*/
+	animation-direction:alternate;/*轮流反向播放动画。*/
+	animation-timing-function: ease-in-out; /*动画的速度曲线*/
+	/* Safari 和 Chrome */
+	-webkit-animation:mymove 5s infinite;
+	-webkit-animation-direction:alternate;/*轮流反向播放动画。*/
+	-webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+}
+.babel-1{
+	left: 50px;
+	top: 144px;
+}
+.babel-2{
+	left: 198px;
+	top: 9px;
+}
+.babel-3{
+	left: 375px;
+	top: 60px;
+}
+.babel-4{
+	right: 325px;
+	top: 20px;
+}
+.babel-5{
+	right: 150px;
+	top: 100px;
+}
+.babel-6{
+	right: 81px;
+	top: 280px;
+}
+.babel-7{
+	right: 92px;
+	top: 477px;
+}
+.babel-8{
+	bottom: 150px;
+	left: 57px;
+}
+.babel-9{
+	top: 208px;
+	left: 245px;
+}
+.babel-10{
+	bottom: 28px;
+	left: 440px;
+}
+.babel-11{
+	bottom: 72px;
+	right: 296px;
+}
+.babel-12{
+	bottom: 133px;
+	left: 300px;
+}
+.babel-13{
+	bottom: 20px;
+	left: 180px;
+}
+.babel-14{
+	top: 236px;
+	right: 280px;
+}
+
+@keyframes mymove
+{
+	0%{
+		transform: scale(1);  /*开始为原始大小*/
+	}
+	25%{
+		transform: scale(1.1); /*放大1.1倍*/
+	}
+	50%{
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(1.1);
+	}
+
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+	0%{
+		transform: scale(1);  /*开始为原始大小*/
+	}
+	25%{
+		transform: scale(1.1); /*放大1.1倍*/
+	}
+	50%{
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(1.1);
+	}
+}
+
+.dsm-box{
+	width: 80%;
+	margin: 8% auto;
+}
+.dsm-pic{
+	width: 40%;
+	margin: 1%;
+}
+.dsm-arrow{
+	width: 6%;
+	margin: 12% 0;
+}
+.dsm-tra{
+	width: 6%;
+	margin: -3% 0;
 }

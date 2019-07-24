@@ -4,26 +4,32 @@
 }
 html,body{
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
-/*回到顶部*/
-.top-button{
+.button-box{
 	position: fixed;
 	bottom: 10%;
-	right: 5%;
-	width:40px;
-	height: 40px;
 	z-index: 1;
+	right: 5%;
+	text-align: center;
+	white-space: nowrap;
+}
+/*回到顶部*/
+.top-button{
+	width:65px;
+	color: #1AA0E6;
 }
 /*回到首页*/
 .home-button{
-	position: fixed;
-	bottom: 20%;
-	right: 5%;
-	width:40px;
-	height: 40px;
-	z-index: 1;
+	width:65px;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+.top-button img,.home-button img{
+	height: 100%;
+	width: 100%;
 }
 /*头部*/
 .header{
@@ -32,13 +38,14 @@ html,body{
 	left: 0;
 	z-index: 99;
 	width: 100%;
-	padding: 1% 4%;
+	padding: 1% 0;
 	background:rgba(0,64,104,1);
 	opacity:1;
 }
 .logo{
 	height: 40px;
-	float: left;
+	position: absolute;
+	left: 3%;
 }
 .logo img{
 	height: 100%;
@@ -46,7 +53,7 @@ html,body{
 /*导航栏*/
 .nav-bar{
 	height: 100%;
-	width:70%;
+	width:64%;
 	margin: 0 auto;
 	height: 40px;
 	display: flex;
