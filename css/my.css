@@ -31,6 +31,37 @@ html,body{
 	height: 100%;
 	width: 100%;
 }
+/*指示器按钮*/
+.page-button{
+	position: fixed;
+	top: 30%;
+	right: 2%;
+	width: 24px;
+	z-index: 9;
+}
+.page-p{
+	width: 14px;
+	height: 14px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin: 40px 5px;
+	border-radius: 50%;
+}
+.page-p-active{
+	cursor: pointer;
+	background: #0096FF;
+	width: 24px;
+	height: 24px;
+	margin: 40px 0;
+	border-radius: 50%;
+}
+.page-p:hover{
+	cursor: pointer;
+	background: #0096FF;
+	width: 24px;
+	height: 24px;
+	margin: 40px 0;
+}
 /*头部*/
 .header{
 	position: fixed;
@@ -89,7 +120,7 @@ html,body{
 
 /*底部文字*/
 .footer-text{
-	width:20%;
+	width:0;
 	left: 40%;
 	margin: 1% auto;
 	display: block;
@@ -119,9 +150,15 @@ html,body{
 
 /*第二屏*/
 .text-box{
+	width:0;
+}
+.text-box-trans{
 	width:45%;
 	margin: 0 auto;
 	margin-top: 10%;
+	-webkit-transition: All 2s ease-in-out;
+	-moz-transition: All 2s ease-in-out;
+	-o-transition: All 2s ease-in-out;
 }
 .text-box img{
 	height: 100%;
@@ -141,7 +178,8 @@ html,body{
 	margin: 2% auto;
 	display: flex;
 }
-.solve-box .img-box{
+.img-box{
+	display: none;
 	width:33.3%;
 	height: 100%;
 	position: relative;
@@ -212,7 +250,7 @@ html,body{
 }
 .item-box ul li{
 	width:10%;
-	height: 100%;
+	height: 0;
 	position: relative;
 	overflow: hidden;
 	display: inline-block;
@@ -236,14 +274,14 @@ html,body{
 }
 .item-box .li-icon{
 	position: absolute;
-	top: 26%;
+	top: 35%;
 	width:20%;
-	left: 39%;
+	left: 40%;
 	z-index: 9;
 }
 .item-box .li-text{
 	position: absolute;
-	top: 42%;
+	top: 48%;
 	width:100%;
 	text-align: center;
 	font-size: 150%;
@@ -324,20 +362,39 @@ html,body{
 	height: 90%;
 	width:30%;
 	border-radius: 4px;
+	box-shadow: 0 0 6px #0092FC;
 	background: -webkit-linear-gradient(#5DBCFF, #0092FC); /* Safari 5.1 - 6.0 */
 	background: -o-linear-gradient(#5DBCFF, #0092FC); /* Opera 11.1 - 12.0 */
 	background: -moz-linear-gradient(#5DBCFF, #0092FC); /* Firefox 3.6 - 15 */
 	background: linear-gradient(#5DBCFF, #0092FC); /* 标准的语法 */
 }
+.consulation-trans{
+	-webkit-transition: All 2s ease-out;
+	-moz-transition: All 2s ease-out;
+	-o-transition: All 2s ease-out;
+	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 1080deg);
+	transform: perspective(400px) rotate3d(0, 1, 0, 1080deg);
+}
 .consulation-card-item-active{
-	height: 100%;
-	width:33%;
+	height: 90%;
+	width:30%;
+	box-shadow: 0 0 6px #0092FC;
 	border-radius: 4px;
 	background: -webkit-linear-gradient(#5DBCFF, #0092FC); /* Safari 5.1 - 6.0 */
 	background: -o-linear-gradient(#5DBCFF, #0092FC); /* Opera 11.1 - 12.0 */
 	background: -moz-linear-gradient(#5DBCFF, #0092FC); /* Firefox 3.6 - 15 */
 	background: linear-gradient(#5DBCFF, #0092FC); /* 标准的语法 */
+	transition: All 0.4s ease-in-out;
+	-webkit-transition: All 0.4s ease-in-out;
+	-moz-transition: All 0.4s ease-in-out;
+	-o-transition: All 0.4s ease-in-out;
+
+	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
+	-moz-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
+	-o-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
+	-ms-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
 }
+
 .card-title{
 	width:46%;
 	margin: 16% auto;

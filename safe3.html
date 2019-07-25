@@ -34,10 +34,10 @@
 			</div>
 			<div class="nav-bar">
 				<a class="nav-bar-a" href="index.html">首页</a>
-				<a class="nav-bar-a">解决方案</a>
-				<a class="nav-bar-a">安全产品</a>
-				<a class="nav-bar-a">安全咨询</a>
-				<a class="nav-bar-a">关于我们</a>
+				<a class="nav-bar-a" href="index.html?id=2">解决方案</a>
+				<a class="nav-bar-a" href="index.html?id=3">安全产品</a>
+				<a class="nav-bar-a" href="index.html?id=4">安全咨询</a>
+				<a class="nav-bar-a" href="index.html?id=5">关于我们</a>
 			</div>
 		</div>
 		<p class="font-title">危险货物道路运输电子运单平台</p>
@@ -60,6 +60,7 @@
 		<p class="font-class" style="margin-bottom: 50px;">功能介绍</p>
 		<!-- 蓝色盒子1 -->
 		<div class="blue-box-1">
+			<p class="blue-title">托运企业端功能</p>
 			<div class="blue-list">
 				<div class="blue-item">
 					<p class="blue-item-text1">
@@ -100,6 +101,7 @@
 
 		<!-- 蓝色盒子2 -->
 		<div class="blue-box-2">
+			<p class="blue-title">政府端功能</p>
 			<div class="blue-list">
 				<div class="blue-item">
 					<p class="blue-item-text1">
@@ -149,6 +151,7 @@
 
 		<!-- 蓝色盒子3 -->
 		<div class="blue-box-3">
+			<p class="blue-title">承运企业端功能</p>
 			<div class="blue-list">
 				<div class="blue-item">
 					<p class="blue-item-text1">
@@ -205,15 +208,19 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="safe/swip1.png">
+						<p class="swiper-p">企业端</p>
 					</div>
 					<div class="swiper-slide">
 						<img src="safe/swip2.png">
+						<p class="swiper-p">驾驶员APP端</p>
 					</div>
 					<div class="swiper-slide">
 						<img src="safe/swip3.png">
+						<p class="swiper-p">监管端</p>
 					</div>
 					<div class="swiper-slide">
 						<img src="safe/swip4.png">
+						<p class="swiper-p">运输车辆在线监控</p>
 					</div>
 				</div>
 			</div>
@@ -259,16 +266,24 @@
 		var mySwiper = new Swiper('.swiper-container', {
 			effect : 'coverflow',
 			slidesPerView: 3,
-			loop: true,
+			initialSlide: 1,
+			slideToClickedSlide: true,
 			centeredSlides: true,
 			coverflowEffect: {
 				rotate: 0,
 				stretch: 10,
-				depth: 60,
-				modifier: 2,
+				depth: 100,
+				modifier: 5,
 				slideShadows : true
 			},
+			speed:1000,
+			autoplay : {
+				delay:3000
+			},
 		});
+		$(function(){
+			sessionStorage.removeItem('id');
+		})
 	</script>
 </body>
 </html>

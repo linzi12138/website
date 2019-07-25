@@ -31,10 +31,10 @@
 			</div>
 			<div class="nav-bar">
 				<a class="nav-bar-a" href="index.html">首页</a>
-				<a class="nav-bar-a">解决方案</a>
-				<a class="nav-bar-a">安全产品</a>
-				<a class="nav-bar-a">安全咨询</a>
-				<a class="nav-bar-a">关于我们</a>
+				<a class="nav-bar-a" href="index.html?id=2">解决方案</a>
+				<a class="nav-bar-a" href="index.html?id=3">安全产品</a>
+				<a class="nav-bar-a" href="index.html?id=4">安全咨询</a>
+				<a class="nav-bar-a" href="index.html?id=5">关于我们</a>
 			</div>
 		</div>
 		<p class="font-title">本质安全型防爆车载监管仪</p>
@@ -71,17 +71,17 @@
 		<p class="blue-text">DSM疲劳驾驶监测功能</p>
 		<div class="dsm-box">
 			<img src="safe/dsm1.png" class="dsm-pic">
-			<img src="safe/arrow1.png" class="dsm-arrow">
+			<img src="safe/arrow1.png" class="dsm-arrow1">
 			<img src="safe/dsm2.png" class="dsm-pic">
 			<img src="safe/arrow2.png" class="dsm-tra">
 			<img src="safe/dsm3.png" class="dsm-pic">
-			<img src="safe/arrow3.png" class="dsm-arrow">
+			<img src="safe/arrow3.png" class="dsm-arrow2">
 			<img src="safe/dsm4.png" class="dsm-pic">
 		</div>
 		<p class="blue-text">主动安全防御（ADAS）</p>
 		<div class="dsm-box">
 			<img src="safe/adas1.png" class="dsm-pic">
-			<img src="safe/arrow1.png" class="dsm-arrow">
+			<img src="safe/arrow1.png" class="dsm-arrow1">
 			<img src="safe/adas2.png" class="dsm-pic">
 			<img src="safe/arrow2.png" class="dsm-tra">
 			<img src="safe/adas3.png" class="dsm-pic" style="margin-left: 30%;">
@@ -124,6 +124,9 @@
 		})
 		$('.home-button').click(function(){
 			location.href = 'index.html';
+		})
+		$(function(){
+			sessionStorage.removeItem('id');
 		})
 	</script>
 </body>

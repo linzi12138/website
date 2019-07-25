@@ -16,9 +16,8 @@
 				sectionContainer: '.page',
 				loop: false,
 				pagination:false,
-				animationTime:500,
-				afterMove(e){
-					console.log(e)
+				animationTime:1000,
+				afterMove(e){//导航栏选中状态跟着走
 					$('.nav-bar a').each(function(){
 						if (($(this).index()+1) == e) {
 							$(this).attr('class','active');
@@ -26,8 +25,28 @@
 							$(this).attr('class','nav-bar-a');
 						}
 					})
+					//右侧指示器跟着走
+					$('.page-button p').each(function(){
+						if ($(this).index()+1 == e) {
+							console.log($(this))
+							$(this).attr('class','page-p-active')
+						}else{
+							$(this).attr('class','page-p')
+						}
+					})
+					myAnimate(e);
 				}
 			});
+
+			$('.page-button p').click(function(){
+				console.log($(this))
+				$('.main').moveTo(parseInt($(this).index()+1));
+				$('.page-button p').each(function(){
+					$(this).attr('class','page-p');
+				})
+				$(this).attr('class','page-p-active');
+				myAnimate(parseInt($(this).index()+1))
+			})
 		});
 	</script>
 </head>
@@ -49,6 +68,15 @@
 			<img src="image/plane.png">
 			<p>回到顶部</p>
 		</div>
+	</div>
+
+	<!-- 指示器 -->
+	<div class="page-button">
+		<p class="page-p-active"></p>
+		<p class="page-p"></p>
+		<p class="page-p"></p>
+		<p class="page-p"></p>
+		<p class="page-p"></p>
 	</div>
 
 	<!-- 单页 -->
@@ -172,7 +200,7 @@
 							<p>应急体系规划编制</p>
 						</div>
 					</div>
-					<div name='card' class="consulation-card-item-active">
+					<div name='card' class="consulation-card-item">
 						<div class="card-title">
 							<img src="image/card2.png">
 							<p>企业服务</p>
@@ -263,7 +291,52 @@
 			})
 			$('.main').moveTo($(this).index()+1);
 			$(this).addClass('active');
+			myAnimate($(this).index()+1);
 		})
+
+		//动画函数
+		function myAnimate(index){
+			if (index == 2) {
+				setTimeout(function(){
+					$('.text-box').addClass('text-box-trans')
+				},1000)
+				setTimeout(function(){
+					$('.img-box').each(function(){
+						$(this).fadeIn(2000)
+					})
+				},3000)
+				return;
+			}else if (index == 3) {
+				setTimeout(function(){
+					$('.item-box .li1').animate({height:'100%'},1000);
+				},200)
+				setTimeout(function(){
+					$('.item-box .li2').animate({height:'100%'},1000);
+				},400)
+				setTimeout(function(){
+					$('.item-box .li3').animate({height:'100%'},1000);
+				},600)
+				setTimeout(function(){
+					$('.item-box .li4').animate({height:'100%'},1000);
+				},800)
+				setTimeout(function(){
+					$('.item-box .footer-text').animate({width:'20%'},1000);
+				},1000)
+				return;
+			}else if (index == 4) {
+				if (sessionStorage.getItem('isTrans')) {
+					return;
+				}
+				setTimeout(function(){
+					$('.consulation-card-item').addClass('consulation-trans');
+					sessionStorage.setItem('isTrans',1)
+				},800)
+				setTimeout(function(){
+					$('.consulation-box .footer-text').animate({width:'20%'},1000);
+				},1000)
+				return;
+			}
+		}
 
 		//轮播图
 		var mySwiper = new Swiper('.swiper-container',{
@@ -319,6 +392,24 @@
 			})
 			$('.main').moveTo(1);
 			$('.nav-bar a')[0].className = 'active'
+		})
+
+		//检测地址栏id判断要滚动到哪一屏
+		if ((sessionStorage.getItem('id') === undefined) || ((sessionStorage.getItem('id') === null))) {
+			$(document).ready(function(){
+				let id = location.href.split('?id=')[1];
+				$('.main').moveTo(parseInt(id));
+				sessionStorage.setItem('id', id);
+				myAnimate(parseInt(id));
+			})
+		}
+
+		//点击详情事件
+		$('.li-button').each(function(index,item){
+			console.log(index)
+			$(this).click(function(){
+				location.href = 'safe'+(index+1)+''+'.html'
+			})
 		})
 	</script>
 </body>

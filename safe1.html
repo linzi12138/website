@@ -10,7 +10,7 @@
 		body{
 			background: url(./image/board1.png);
 			background-size: cover;
-			/*background-repeat: repeat;*/
+			background-repeat: repeat;
 		}
 	</style>
 </head>
@@ -35,10 +35,10 @@
 			</div>
 			<div class="nav-bar">
 				<a class="nav-bar-a" href="index.html">首页</a>
-				<a class="nav-bar-a">解决方案</a>
-				<a class="nav-bar-a">安全产品</a>
-				<a class="nav-bar-a">安全咨询</a>
-				<a class="nav-bar-a">关于我们</a>
+				<a class="nav-bar-a" href="index.html?id=2">解决方案</a>
+				<a class="nav-bar-a" href="index.html?id=3">安全产品</a>
+				<a class="nav-bar-a" href="index.html?id=4">安全咨询</a>
+				<a class="nav-bar-a" href="index.html?id=5">关于我们</a>
 			</div>
 		</div>
 		<p class="font-title">危险化学品装卸运输安全监管平台</p>
@@ -135,6 +135,9 @@
 		})
 		$('.home-button').click(function(){
 			location.href = 'index.html';
+		})
+		$(function(){
+			sessionStorage.removeItem('id');
 		})
 	</script>
 </body>
