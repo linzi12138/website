@@ -67,7 +67,7 @@ html,body{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 999;
 	width: 100%;
 	padding: 1% 0;
 	background:rgba(0,64,104,1);
@@ -83,7 +83,7 @@ html,body{
 }
 /*导航栏*/
 .nav-bar{
-	height: 100%;
+	height: 100%!important;
 	width:64%;
 	margin: 0 auto;
 	height: 40px;
@@ -258,6 +258,7 @@ html,body{
 }
 .fold .li-img{
 	width:100%;
+	height: 100%;
 	position: absolute;
 	height: max-content;
 	object-fit: cover;
@@ -378,13 +379,13 @@ html,body{
 .consulation-card-item-active{
 	height: 90%;
 	width:30%;
-	box-shadow: 0 0 6px #0092FC;
+	box-shadow: 0 0 20px #0092FC;
 	border-radius: 4px;
 	background: -webkit-linear-gradient(#5DBCFF, #0092FC); /* Safari 5.1 - 6.0 */
 	background: -o-linear-gradient(#5DBCFF, #0092FC); /* Opera 11.1 - 12.0 */
 	background: -moz-linear-gradient(#5DBCFF, #0092FC); /* Firefox 3.6 - 15 */
 	background: linear-gradient(#5DBCFF, #0092FC); /* 标准的语法 */
-	transition: All 0.4s ease-in-out;
+	/*transition: All 0.4s ease-in-out;
 	-webkit-transition: All 0.4s ease-in-out;
 	-moz-transition: All 0.4s ease-in-out;
 	-o-transition: All 0.4s ease-in-out;
@@ -392,7 +393,7 @@ html,body{
 	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
 	-moz-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
 	-o-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
-	-ms-transform: perspective(400px) rotate3d(0, 1, 0, 4deg);
+	-ms-transform: perspectiv*/e(400px) rotate3d(0, 1, 0, 4deg);
 }
 
 .card-title{
@@ -416,7 +417,6 @@ html,body{
 .card-detail {
 	text-align: center;
 	font-size: 100%;
-	line-height: 2;
 	color:#fff;
 }
 
@@ -491,5 +491,6 @@ html,body{
 	justify-content: space-around;
 }
 .about-img img{
-	width: 100%;
+	width: 200px;
+	height: 45%;
 }

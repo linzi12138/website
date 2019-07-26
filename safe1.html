@@ -8,9 +8,10 @@
 	<script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
 	<style>
 		body{
+			width: 100%;
+			overflow-x: hidden;
+			background-repeat: repeat-y;
 			background: url(./image/board1.png);
-			background-size: cover;
-			background-repeat: repeat;
 		}
 	</style>
 </head>
@@ -138,6 +139,7 @@
 		})
 		$(function(){
 			sessionStorage.removeItem('id');
+			sessionStorage.removeItem('isTrans');
 		})
 	</script>
 </body>

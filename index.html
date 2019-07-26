@@ -16,8 +16,10 @@
 				sectionContainer: '.page',
 				loop: false,
 				pagination:false,
+				responsiveFallback: 600,
+				autoHeight: true,
 				animationTime:1000,
-				afterMove(e){//导航栏选中状态跟着走
+				afterMove:function(e){//导航栏选中状态跟着走
 					$('.nav-bar a').each(function(){
 						if (($(this).index()+1) == e) {
 							$(this).attr('class','active');
@@ -35,6 +37,11 @@
 						}
 					})
 					myAnimate(e);
+					if (e == 1) {
+						$('.button-box').fadeOut();
+					}else{
+						$('.button-box').fadeIn();
+					}
 				}
 			});
 
@@ -63,7 +70,7 @@
 			<a class="nav-bar-a">关于我们</a>
 		</div>
 	</div>
-	<div class="button-box">
+	<div class="button-box" style="display: none;">
 		<div class="top-button">
 			<img src="image/plane.png">
 			<p>回到顶部</p>
@@ -87,13 +94,13 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="image/swiper1.png">
+						<img src="image/swiper1.png" style="object-fit: cover;">
 					</div>
 					<div class="swiper-slide">
-						<img src="image/swiper2.png">
+						<img src="image/swiper2.png" style="object-fit: cover;">
 					</div>
 					<div class="swiper-slide">
-						<img src="image/swiper3.png">
+						<img src="image/swiper3.png" style="object-fit: cover;">
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
@@ -263,16 +270,16 @@
 						</div>
 						<div class="about-list-img">
 							<div class="about-img">
-								<img src="image/com1.png">
-								<img src="image/com4.png">
+								<img src="image/company1.png">
+								<img src="image/company4.png">
 							</div>
 							<div class="about-img">
-								<img src="image/com2.png">
-								<img src="image/com5.png">
+								<img src="image/company2.png">
+								<img src="image/company5.png">
 							</div>
 							<div class="about-img">
-								<img src="image/com3.png">
-								<img src="image/com6.png">
+								<img src="image/company3.png">
+								<img src="image/company6.png">
 							</div>
 						</div>
 					</div>
@@ -304,7 +311,7 @@
 					$('.img-box').each(function(){
 						$(this).fadeIn(2000)
 					})
-				},3000)
+				},2000)
 				return;
 			}else if (index == 3) {
 				setTimeout(function(){
@@ -324,12 +331,14 @@
 				},1000)
 				return;
 			}else if (index == 4) {
-				if (sessionStorage.getItem('isTrans')) {
+				if (window.sessionStorage && sessionStorage.getItem('isTrans')) {
 					return;
 				}
 				setTimeout(function(){
 					$('.consulation-card-item').addClass('consulation-trans');
-					sessionStorage.setItem('isTrans',1)
+					if (window.sessionStorage){
+						sessionStorage.setItem('isTrans',1)
+					}
 				},800)
 				setTimeout(function(){
 					$('.consulation-box .footer-text').animate({width:'20%'},1000);
@@ -395,13 +404,15 @@
 		})
 
 		//检测地址栏id判断要滚动到哪一屏
-		if ((sessionStorage.getItem('id') === undefined) || ((sessionStorage.getItem('id') === null))) {
-			$(document).ready(function(){
-				let id = location.href.split('?id=')[1];
-				$('.main').moveTo(parseInt(id));
-				sessionStorage.setItem('id', id);
-				myAnimate(parseInt(id));
-			})
+		if (window.sessionStorage) {
+			if ((sessionStorage.getItem('id') === undefined) || ((sessionStorage.getItem('id') === null))) {
+				$(document).ready(function(){
+					let id = location.href.split('?id=')[1];
+					$('.main').moveTo(parseInt(id));
+					sessionStorage.setItem('id', id);
+					myAnimate(parseInt(id));
+				})
+			}
 		}
 
 		//点击详情事件

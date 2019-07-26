@@ -9,7 +9,9 @@
 	<style>
 		body{
 			background: url(./image/board4.png);
-			background-size: cover;
+			width: 100%;
+			overflow-x: hidden;
+			background-repeat: repeat-y;
 		}
 	</style>
 </head>
@@ -93,11 +95,12 @@
 				<a href="#">淄博市交通运输局</a>
 			</div>
 		</div>
-		<p class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp; 为了加强危化品装卸运输全过程安全管理，根据淄博市政府201 7年53号会议纪要确定建设淄博市危化品装卸
+		<p class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp;          为了加强危化品装卸运输全过程安全管理，根据淄博市政府201 7年53号会议纪要确定建设淄博市危化品装卸
 			运输监管平台，要求重点解决包括危化品运输介质不符、驾驶员押运员身份认证、驾驶员中途换人、装卸过程安全管
 			理等问题。淄博市危险化学品蓑卸运输监管平台，利用危化品装卸运辕安全监管仪，对骂驶员及押运员身份，进行上
 			车刷eid卡验证利用车载elD屏进行危化品电子运单、出车前检查等操作；装卸环节通过电子围栏验证车辆营运范围信
-		息；同时，在运输环节利用北斗高精度定位，进行全过程监管；利用人匾识别活体</p>
+			息；同时，在运输环节利用北斗高精度定位，进行全过程监管；利用人匾识别活体检测验证驾驶员驾驶行为分析，杜
+		绝中途换人、不安全驾驶行为；同时通过智能视频监控技术，对安全驾驶进行提前预警。</p>
 	</div>
 	<div class="footer2">
 		<img src="image/logo1.png" class="footer-logo">
@@ -127,6 +130,7 @@
 		})
 		$(function(){
 			sessionStorage.removeItem('id');
+			sessionStorage.removeItem('isTrans');
 		})
 	</script>
 </body>

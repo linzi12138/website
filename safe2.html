@@ -9,8 +9,9 @@
 	<style>
 		body{
 			background: url(./image/board2.png);
-			background-size: cover;
-			background-repeat: no-repeat;
+			width: 100%;
+			overflow-x: hidden;
+			background-repeat: repeat-y;
 		}
 	</style>
 </head>
@@ -109,6 +110,7 @@
 		})
 		$(function(){
 			sessionStorage.removeItem('id');
+			sessionStorage.removeItem('isTrans');
 		})
 	</script>
 </body>
